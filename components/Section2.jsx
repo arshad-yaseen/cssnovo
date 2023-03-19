@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 function Section2() {
@@ -22,18 +23,22 @@ function Section2() {
 
         <ul>
           <li className="font-regular text-xl mt-10 flex">
-            <img
+            <Image
+                width={28}
+                height={3}
               src="https://assets.website-files.com/6177739448baa66404ce1d9c/619c69d4ef5e408207944d15_checkmark_circle_outlined.png"
               alt="tick"
-              className="h-7 mr-2"
+              className=" mr-2"
             />{" "}
             Not just html and css
           </li>
           <li className="font-regular text-xl mt-4 flex">
-            <img
+            <Image
+                width={28}
+                height={3}
               src="https://assets.website-files.com/6177739448baa66404ce1d9c/619c69d4ef5e408207944d15_checkmark_circle_outlined.png"
               alt="tick"
-              className="h-7 mr-2"
+              className=" mr-2"
             />{" "}
             React, Vue, Angular, Svelte, and more
           </li>

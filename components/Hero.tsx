@@ -11,7 +11,7 @@ function Hero() {
         <br /> code with ease
       </h1>
       <span className="text-[20px] font-regular text-center mt-6 leading-[30px]">
-        Unlock CSS's potential with cssnovo - Your ultimate <br /> toolkit for
+        Unlock CSS&apos;s potential with cssnovo - Your ultimate <br /> toolkit for
         effortless and efficient web design.
       </span>
       <div className="flex mt-12">
