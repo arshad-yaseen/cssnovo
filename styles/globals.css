@@ -2,59 +2,168 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: #f0f1ee;
+}
+
 /* Define custom fonts */
 @font-face {
-    font-family: 'Labil-Grotesk-Thin';
-    src: url('../public/assets/Fonts/LabilGroteskThin.otf') format('opentype');
+  font-family: "Labil-Grotesk-Thin";
+  src: url("../public/assets/Fonts/LabilGroteskThin.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Labil-Grotesk-Regular";
+  src: url("../public/assets/Fonts/LabilGroteskRegular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Labil-Grotesk-Bold";
+  src: url("../public/assets/Fonts/LabilGroteskBold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Labil-Grotesk-Medium";
+  src: url("../public/assets/Fonts/LabilGroteskMedium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Labil-Grotesk-Light";
+  src: url("../public/assets/Fonts/LabilGroteskLight.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Labil-Grotesk-Black";
+  src: url("../public/assets/Fonts/LabilGroteskBlack.otf") format("opentype");
+}
+
+/* Apply custom fonts to elements */
+.font-thin {
+  font-family: "Labil-Grotesk-Thin", sans-serif;
+}
+
+.font-regular {
+  font-family: "Labil-Grotesk-Regular", sans-serif;
+}
+
+.font-bold {
+  font-family: "Labil-Grotesk-Bold", sans-serif;
+}
+
+.font-medium {
+  font-family: "Labil-Grotesk-Medium", sans-serif;
+}
+
+.font-light {
+  font-family: "Labil-Grotesk-Light", sans-serif;
+}
+
+.font-black {
+  font-family: "Labil-Grotesk-Black", sans-serif;
+}
+
+.color-primary {
+  color: #4352ff;
+}
+
+/* Home Hero Text Underline */
+.home_hero_text_underline {
+  display: inline-block;
+  overflow: visible;
+  margin-right: -5rem;
+  margin-bottom: -2.5rem;
+  margin-left: -5rem;
+  padding-right: 5rem;
+  padding-bottom: 2.5rem;
+  padding-left: 5rem;
+  background-image: url("https://assets.website-files.com/6177739448baa66404ce1d9c/62db7c68e8fd177ad5e8fa95_hero-header-underline.svg");
+  background-position: 50% 250%;
+  background-size: 20.9375rem;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+.text-black {
+  color: #171716;
+}
+
+.example-message {
+  animation: animate_message 1s ease 0s 1 normal none running;
+}
+
+@keyframes animate_message {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
   }
-  
-  @font-face {
-    font-family: 'Labil-Grotesk-Regular';
-    src: url('../public/assets/Fonts/LabilGroteskRegular.otf') format('opentype');
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
   }
-  
-  @font-face {
-    font-family: 'Labil-Grotesk-Bold';
-    src: url('../public/assets/Fonts/LabilGroteskBold.otf') format('opentype');
+}
+
+/* Hiding Home Example Section Output Code Container Scrollbar */
+#output::-webkit-scrollbar {
+  width: 0px;
+  display: none;
+}
+
+/* Hiding Home Example Section Start Code Container Scrollbar */
+#start::-webkit-scrollbar {
+  width: 0px;
+  display: none;
+}
+
+.copypaste-symbol_wrapper_1, .copypaste-symbol_wrapper_2 {
+  display: flex;
+  height: 54px;
+  width: fit-content;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 3.5px solid #fff;
+  border-radius: 10px;
+  background-color: #171617;
+  box-shadow: 6px 6px 0 0 #fff;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.copypaste-symbol_wrapper_1 {
+  margin-right: 0.5rem;
+  animation: animate_overview_button 3s ease-in-out infinite;
+}
+.copypaste-symbol_wrapper_2 {
+  margin-right: 0.5rem;
+  animation: animate_overview_button_2 5s ease-in-out infinite;
+}
+
+@keyframes animate_overview_button {
+  10% {
+    box-shadow: 3px 3px 0 0 #fff;
+    transform: scale(0.99);
   }
-  
-  @font-face {
-    font-family: 'Labil-Grotesk-Medium';
-    src: url('../public/assets/Fonts/LabilGroteskMedium.otf') format('opentype');
+  20% {
+    box-shadow: 6px 6px 0 0 #fff;
+    transform: scale(1);
   }
-  
-  @font-face {
-    font-family: 'Labil-Grotesk-Light';
-    src: url('../public/assets/Fonts/LabilGroteskLight.otf') format('opentype');
+}
+@keyframes animate_overview_button_2 {
+  10% {
+    box-shadow: 3px 3px 0 0 #fff;
+    transform: scale(0.99);
   }
-  
-  @font-face {
-    font-family: 'Labil-Grotesk-Black';
-    src: url('../public/assets/Fonts/LabilGroteskBlack.otf') format('opentype');
+  15% {
+    box-shadow: 6px 6px 0 0 #fff;
+    transform: scale(1);
   }
-  
-  /* Apply custom fonts to elements */
-  .font-thin {
-    font-family: 'Labil-Grotesk-Thin', sans-serif;
-  }
-  
-  .font-regular {
-    font-family: 'Labil-Grotesk-Regular', sans-serif;
-  }
-  
-  .font-bold {
-    font-family: 'Labil-Grotesk-Bold', sans-serif;
-  }
-  
-  .font-medium {
-    font-family: 'Labil-Grotesk-Medium', sans-serif;
-  }
-  
-  .font-light {
-    font-family: 'Labil-Grotesk-Light', sans-serif;
-  }
-  
-  .font-black {
-    font-family: 'Labil-Grotesk-Black', sans-serif;
-  }
-  
+}
