@@ -4,7 +4,7 @@ import OverviewSection from "@/components/OverviewSection.jsx";
 import Section1 from "@/components/Section1.jsx";
 import Section2 from "@/components/Section2.jsx";
 import Head from "next/head";
-import DarkLogoRounded from "../public/assets/Logos/SVGS/black-logo-rounded-border.svg";
+import DarkLogoRounded from "../public/assets/Logos/Svgs/black-logo-rounded-border.svg";
 import ConversionExampleSection from "@/components/ConversionExampleSection.jsx";
 
 export default function Home() {
