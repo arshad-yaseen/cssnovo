@@ -1,15 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import React from "react";
 import { BsFillPlayCircleFill } from "react-icons/bs";
 import BrandsPng from "../public/images/brands.png"
 
+
 function Hero() {
+  
+ 
 
   return (
     <div className="flex h-screen flex-col items-center pt-10">
-      <h1 className="text-[72px] leading-[94px] font-medium text-[#161616] text-center ">
+      <h1 className=" text-[72px] leading-[94px] font-medium text-[#161616] text-center ">
         <span className="home_hero_text_underline">Transform</span> your css{" "}
         <br /> code with ease
       </h1>

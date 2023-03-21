@@ -1,10 +1,45 @@
+import gsap from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
+import SplitType from "split-type";
 
 function Section2() {
+
+  useEffect(()=> {
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const HeroTitle = new SplitType('h1.section-2-title',{ types: 'chars' })
+    const chars = HeroTitle.chars
+  
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#section2", 
+        start: "top 170%", 
+      }
+    });
+    
+    tl.fromTo(
+      chars,
+      {
+        y: 100,
+        opacity: 0
+      },
+      {
+        y: 0,
+        opacity: 1,
+        stagger: 0.04,
+        duration: 1,
+        ease: 'power4.out',
+      }
+    );
+
+  },[])
+
   return (
-    <div className="w-full h-[80vh] flex pt-10 bg-[#F0F1EE]">
-      <div data-scroll data-scroll-speed="1" className="w-1/2 h-full  flex flex-col justify-center px-20 overflow-hidden">
+    <div id="section2" className="w-full h-[80vh] flex pt-10 bg-[#F0F1EE]">
+      <div className="w-1/2 h-full  flex flex-col justify-center px-20 overflow-hidden">
       <div
           style={{
             paddingTop: "56.25%",
@@ -29,7 +64,7 @@ function Section2() {
         </div>
       </div>
       <div className="w-1/2 h-full  flex flex-col justify-center px-20">
-        <h1 className="text-6xl font-medium text-[#161616]">
+        <h1 className="text-6xl clip-polygon section-2-title font-medium text-[#161616]">
           Debug your <br /> code using AI
         </h1>
 

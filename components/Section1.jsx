@@ -1,11 +1,48 @@
+import gsap from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
+import SplitType from "split-type";
 
 function Section1() {
+
+
+  useEffect(()=> {
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const HeroTitle = new SplitType('h1.section-1-title',{ types: 'chars' })
+    const chars = HeroTitle.chars
+  
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#section1", 
+        start: "top 130%", 
+      }
+    });
+    
+    tl.fromTo(
+      chars,
+      {
+        y: 100,
+        opacity: 0
+      },
+      {
+        y: 0,
+        opacity: 1,
+        stagger: 0.04,
+        duration: 1,
+        ease: 'power4.out',
+      }
+    );
+
+  },[])
+
+
   return (
-    <div className="w-full h-[80vh] flex bg-[#F0F1EE] ">
-      <div className="w-1/2 h-full  flex flex-col justify-center px-20">
-        <h1 className="text-6xl font-medium text-[#161616]">
+    <div id="section1"  className="w-full h-[80vh] flex bg-[#F0F1EE] ">
+      <div  className="w-1/2 h-full  flex flex-col justify-center px-20">
+        <h1 className="text-6xl section-1-title clip-polygon font-medium text-[#161616]">
         Design to code, <br />
 in seconds
         </h1>
@@ -40,7 +77,7 @@ in seconds
           Try it now
         </button>
       </div>
-      <div data-scroll data-scroll-speed="2"  className="w-1/2 h-full  flex flex-col justify-center px-20 overflow-hidden">
+      <div  className="w-1/2 h-full  flex flex-col justify-center px-20 overflow-hidden">
       <div
       
           style={{

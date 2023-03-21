@@ -1,8 +1,43 @@
-import React from "react";
+import gsap from "gsap";
+import React, { useEffect } from "react";
+import SplitType from "split-type";
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 function OverviewSection() {
+
+  useEffect(()=> {
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const HeroTitle = new SplitType('h1.overview-section-title',{ types: 'chars' })
+    const chars = HeroTitle.chars
+  
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#overview-section", 
+        start: "top 100%", 
+      }
+    });
+    
+    tl.fromTo(
+      chars,
+      {
+        y: 100,
+        opacity: 0
+      },
+      {
+        y: 0,
+        opacity: 1,
+        stagger: 0.04,
+        duration: 1,
+        ease: 'power4.out',
+      }
+    );
+
+  },[])
+
   return (
-    <div className="h-[70vh]  w-full flex flex-col items-center justify-center bg-[#171617] text-white">
+    <div id="overview-section" className="h-[70vh]  w-full flex flex-col items-center justify-center bg-[#171617] text-white">
       <div className="flex w-full justify-center h-fit">
         <div className="copypaste-symbol_wrapper_1">
           <div className="copypaste-symbol_text-wrapper">
@@ -24,7 +59,7 @@ function OverviewSection() {
         </div>
       </div>
 
-      <h1 className="text-7xl font-medium text-center mt-10">
+      <h1 className="text-7xl clip-polygon overview-section-title font-medium text-center mt-10">
         Say goodbye to <br /> complexity styling{" "}
       </h1>
       <p className="w-[440px] text-center font-regular text-xl mt-10" >Simplify website styling with our all-in-one CSS toolkit featuring auto-generation, optimization, and real-time feedback and more tooo.</p>
