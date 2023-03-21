@@ -8,6 +8,8 @@ import Head from "next/head";
 import DarkLogoRounded from "../public/assets/Logos/Svgs/black-logo-rounded-border.svg";
 import ConversionExampleSection from "@/components/ConversionExampleSection.jsx";
 import HomeToolsExamples from "@/components/HomeToolsExamples.jsx";
+import Pricing from "@/components/Pricing.jsx";
+import Footer from "@/components/Footer.jsx";
 
 export default function Home() {
   return (
@@ -26,6 +28,8 @@ export default function Home() {
       <Section3 />
       <ConversionExampleSection />
       <HomeToolsExamples />
+      <Pricing />
+      <Footer />
     </div>
   );
 }

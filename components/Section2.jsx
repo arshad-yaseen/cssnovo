@@ -5,13 +5,28 @@ function Section2() {
   return (
     <div className="w-full h-[80vh] flex pt-10 bg-[#F0F1EE]">
       <div className="w-1/2 h-full  flex flex-col justify-center px-20 overflow-hidden">
-        <video
-          autoPlay
-          loop
-          muted
-          className="scale-150  rounded-3xl "
-          src="https://player.vimeo.com/progressive_redirect/download/810029173/container/c56cf4f6-1ee5-4037-ad36-8069dc4bf9ff/e037d239-d40b4c1b/x2download.app-make_a_framer_website_in_minutes-%281080p60%29.mp4%20%28720p%29.mp4?expires=1679378769&loc=external&signature=334f54f95cfb30d58b60b97073508f9035393d0ea910084eaa2cd77a00bf884c"
-        ></video>
+      <div
+          style={{
+            paddingTop: "56.25%",
+            position: "relative",
+            overflow: "hidden",
+            transform: "scale(1.5)",
+          }}
+        >
+          <iframe
+            allowFullScreen=""
+            allow="autoplay;fullscreen"
+            src="https://onelineplayer.com/player.html?autoplay=true&autopause=false&muted=true&loop=true&url=https%3A%2F%2Fwww.dropbox.com%2Fs%2Fws8tlpgnog4d37e%2FX2Download.app-Make%2520A%2520Framer%2520Website%2520In%2520Minutes-%25281080p60%2529.mp4%3Fraw%3D1&poster=&time=false&progressBar=false&overlay=true&muteButton=false&fullscreenButton=false&style=light&quality=auto&playButton=false"
+            style={{
+              position: "absolute",
+              height: "100%",
+              width: "100%",
+              left: 0,
+              top: 0,
+              borderRadius: "1.5rem",
+            }}
+          />
+        </div>
       </div>
       <div className="w-1/2 h-full  flex flex-col justify-center px-20">
         <h1 className="text-6xl font-medium text-[#161616]">

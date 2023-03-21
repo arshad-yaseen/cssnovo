@@ -22,7 +22,7 @@ function Hero() {
           <BsFillPlayCircleFill className="mr-2" /> Watch video
         </button>
       </div>
-      <span className="text-sm font-regular text-center mt-16 text-[#161616] leading-[30px]">
+      <span className="text-[0.950rem] font-regular text-center mt-12 text-[#161616] leading-[30px]">
         Cssnovo uses the OpenAI{" "}
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF7248] to-[#6248FE] font-medium">
           GPT-4 API
@@ -30,7 +30,7 @@ function Hero() {
         to generate CSS code and other entire functions
       </span>
 
-      <Image src={BrandsPng} height={60} alt="brands" className="mt-10 opacity-30" />
+      <Image src={BrandsPng} height={60} alt="brands" className="mt-10 opacity-40" />
 
     </div>
   );

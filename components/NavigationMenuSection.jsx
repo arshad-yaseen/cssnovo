@@ -5,6 +5,23 @@ import Link from "next/link";
 import { BsArrowRightShort } from "react-icons/bs";
 
 const NavigationMenuSection = () => {
+  let tools = [
+    "Design to Code",
+    "Review Code",
+    "Debugging Code",
+    "Optimize and Improve Performance of Code",
+    "Framework Converter",
+    " SCSS, CSS Converter",
+    "A/B Testing",
+    " Responsive CSS Converter",
+    "Responsive Framework Converter",
+    "Auto CSS Code Generator from HTML",
+    "Framework Code From Html and CSS",
+    "Animation and Transition Generator",
+    "Responsive Design Checker",
+    "CSS To All Browser Compatible Code",
+  ];
+
   return (
     <NavigationMenu.Root className="relative z-[1] flex w-screen justify-center">
       <NavigationMenu.List className="center  m-0 flex list-none rounded-[6px] bg-white p-1 ">
@@ -19,124 +36,25 @@ const NavigationMenuSection = () => {
           <NavigationMenu.Content className="data-[motion=from-start]:animate-enterFromLeft data-[motion=from-end]:animate-enterFromRight data-[motion=to-start]:animate-exitToLeft data-[motion=to-end]:animate-exitToRight absolute top-0 left-0  h-[500px] w-[420px] overflow-scroll">
             <main className="flex  w-full h-full rounded-2xl px-4 pt-4 bg-white">
               <ul className="h-full w-full ">
-                <li className="flex flex-col p-3 hover:bg-slate-50 rounded-md cursor-pointer group">
-                  <h1 className="font-regular">
-                    Design to Code{" "}
-                    <span className="absolute right-10 group-hover:right-8 group-hover:opacity-100 opacity-0 duration-300 transition-all text-slate-500 text-2xl">
-                      <BsArrowRightShort />
-                    </span>
-                  </h1>
-                </li>
-                <li className="flex flex-col p-3 hover:bg-slate-50 rounded-md cursor-pointer group">
-                  <h1 className="font-regular">
-                    Review Code{" "}
-                    <span className="absolute right-10 group-hover:right-8 group-hover:opacity-100 opacity-0 duration-300 transition-all text-slate-500 text-2xl">
-                      <BsArrowRightShort />
-                    </span>
-                  </h1>
-                </li>
-                <li className="flex flex-col p-3 hover:bg-slate-50 rounded-md cursor-pointer group">
-                  <h1 className="font-regular">
-                    Debugging Code{" "}
-                    <span className="absolute right-10 group-hover:right-8 group-hover:opacity-100 opacity-0 duration-300 transition-all text-slate-500 text-2xl">
-                      <BsArrowRightShort />
-                    </span>
-                  </h1>
-                </li>
-                <li className="flex flex-col p-3 hover:bg-slate-50 rounded-md cursor-pointer group">
-                  <h1 className="font-regular">
-                    Optimize and Improve Performance of Code{" "}
-                    <span className="absolute right-10 group-hover:right-8 group-hover:opacity-100 opacity-0 duration-300 transition-all text-slate-500 text-2xl">
-                      <BsArrowRightShort />
-                    </span>
-                  </h1>
-                </li>
-                <li className="flex flex-col p-3 hover:bg-slate-50 rounded-md cursor-pointer group">
-                  <h1 className="font-regular">
-                    Framework Converter{" "}
-                    <span className="absolute right-10 group-hover:right-8 group-hover:opacity-100 opacity-0 duration-300 transition-all text-slate-500 text-2xl">
-                      <BsArrowRightShort />
-                    </span>
-                  </h1>
-                </li>
-                <li className="flex flex-col p-3 hover:bg-slate-50 rounded-md cursor-pointer group">
-                  <h1 className="font-regular">
-                    SCSS, CSS Converter{" "}
-                    <span className="absolute right-10 group-hover:right-8 group-hover:opacity-100 opacity-0 duration-300 transition-all text-slate-500 text-2xl">
-                      <BsArrowRightShort />
-                    </span>
-                  </h1>
-                </li>
-                <li className="flex flex-col p-3 hover:bg-slate-50 rounded-md cursor-pointer group">
-                  <h1 className="font-regular">
-                    A/B Testing
-                    <span className="absolute right-10 group-hover:right-8 group-hover:opacity-100 opacity-0 duration-300 transition-all text-slate-500 text-2xl">
-                      <BsArrowRightShort />
-                    </span>
-                  </h1>
-                </li>
-                <li className="flex flex-col p-3 hover:bg-slate-50 rounded-md cursor-pointer group">
-                  <h1 className="font-regular">
-                    Responsive CSS Converter{" "}
-                    <span className="absolute right-10 group-hover:right-8 group-hover:opacity-100 opacity-0 duration-300 transition-all text-slate-500 text-2xl">
-                      <BsArrowRightShort />
-                    </span>
-                  </h1>
-                </li>
-                <li className="flex flex-col p-3 hover:bg-slate-50 rounded-md cursor-pointer group">
-                  <h1 className="font-regular">
-                    Responsive Framework Converter{" "}
-                    <span className="absolute right-10 group-hover:right-8 group-hover:opacity-100 opacity-0 duration-300 transition-all text-slate-500 text-2xl">
-                      <BsArrowRightShort />
-                    </span>
-                  </h1>
-                </li>
-                <li className="flex flex-col p-3 hover:bg-slate-50 rounded-md cursor-pointer group">
-                  <h1 className="font-regular">
-                    Auto CSS Code Generator from HTML{" "}
-                    <span className="absolute right-10 group-hover:right-8 group-hover:opacity-100 opacity-0 duration-300 transition-all text-slate-500 text-2xl">
-                      <BsArrowRightShort />
-                    </span>
-                  </h1>
-                </li>
-                <li className="flex flex-col p-3 hover:bg-slate-50 rounded-md cursor-pointer group">
-                  <h1 className="font-regular">
-                    Framework Code From Html and CSS{" "}
-                    <span className="absolute right-10 group-hover:right-8 group-hover:opacity-100 opacity-0 duration-300 transition-all text-slate-500 text-2xl">
-                      <BsArrowRightShort />
-                    </span>
-                  </h1>
-                </li>
-                <li className="flex flex-col p-3 hover:bg-slate-50 rounded-md cursor-pointer group">
-                  <h1 className="font-regular">
-                    Animation and Transition Generator{" "}
-                    <span className="absolute right-10 group-hover:right-8 group-hover:opacity-100 opacity-0 duration-300 transition-all text-slate-500 text-2xl">
-                      <BsArrowRightShort />
-                    </span>
-                  </h1>
-                </li>
-                <li className="flex flex-col p-3 hover:bg-slate-50 rounded-md cursor-pointer group">
-                  <h1 className="font-regular">
-                    Responsive Design Checker{" "}
-                    <span className="absolute right-10 group-hover:right-8 group-hover:opacity-100 opacity-0 duration-300 transition-all text-slate-500 text-2xl">
-                      <BsArrowRightShort />
-                    </span>
-                  </h1>
-                </li>
-                <li className="flex flex-col p-3 hover:bg-slate-50 rounded-md cursor-pointer group">
-                  <h1 className="font-regular">
-                    {" "}
-                    CSS To All Browser Compatible Code{" "}
-                    <span className="absolute right-10 group-hover:right-8 group-hover:opacity-100 opacity-0 duration-300 transition-all text-slate-500 text-2xl">
-                      <BsArrowRightShort />
-                    </span>
-                  </h1>
-                </li>
+                {tools.map((tool, index) => {
+                  return (
+                    <li
+                      key={index}
+                      className="flex flex-col p-3 hover:bg-slate-50 rounded-md cursor-pointer group"
+                    >
+                      <h1 className="font-regular">
+                        {tool}{" "}
+                        <span className="absolute right-10 group-hover:right-8 group-hover:opacity-100 opacity-0 duration-300 transition-all text-slate-500 text-2xl">
+                          <BsArrowRightShort />
+                        </span>
+                      </h1>
+                    </li>
+                  );
+                })}
               </ul>
             </main>
           </NavigationMenu.Content>
         </NavigationMenu.Item>
-
 
         <NavigationMenu.Item>
           <Link
