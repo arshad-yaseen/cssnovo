@@ -19,7 +19,7 @@ function Footer() {
             />
           </a>
           <p class="text-body-color mb-7 text-base">
-          Unlock CSS's potential with cssnovo - Your ultimate toolkit for effortless and efficient web design, with intuitive tools and expert guidance to create
+          Unlock CSS&apos;s potential with cssnovo - Your ultimate toolkit for effortless and efficient web design, with intuitive tools and expert guidance to create
           </p>
         </div>
       </div>
