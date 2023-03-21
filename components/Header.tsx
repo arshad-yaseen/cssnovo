@@ -2,11 +2,14 @@ import Image from "next/image";
 import React from "react";
 import whiteLogo from "../public/assets/Logos/Svgs/white-logo-circle.svg";
 import NavigationMenuSection from "@/components/NavigationMenuSection";
+import Link from "next/link";
 
 function Header() {
+
+
   return (
     <div className="w-full h-24 z-[100]  flex items-center sticky top-0  bg-[#F0F1EE]">
-      <div className="w-[33.333%] flex items-center h-full pl-10">
+      <Link href="/" className="w-[33.333%] hover:opacity-80 transition-opacity flex items-center h-full cursor-pointer pl-10">
         <Image
           height={40}
           src={whiteLogo}
@@ -14,7 +17,7 @@ function Header() {
           className="mt-1.5"
         />
         <h3 className="font-medium text-2xl text-[#161616] ml-3">cssnovo</h3>
-      </div>
+      </Link>
       <div className="w-[33.333%] h-full flex items-center justify-center">
         <NavigationMenuSection />
       </div>

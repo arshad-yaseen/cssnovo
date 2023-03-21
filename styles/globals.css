@@ -82,6 +82,20 @@ body {
   background-repeat: no-repeat;
   background-attachment: scroll;
 }
+.home_hero_text_underline_2 {
+  display: inline-block;
+  margin-right: -5rem;
+  margin-bottom: -3rem;
+  margin-left: -5rem;
+  padding-right: 5rem;
+  padding-bottom: 3rem;
+  padding-left: 5rem;
+  background-image: url("https://assets.website-files.com/6177739448baa66404ce1d9c/62dbd23222fdbe833ef5e3f0_hours-underline.svg");
+  background-position: 50% 120%;
+  background-size: 17.5625rem;
+  background-repeat: no-repeat;
+}
+
 .text-black {
   color: #171716;
 }

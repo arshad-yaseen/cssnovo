@@ -3,7 +3,7 @@ import {BsCaretRightFill} from "react-icons/bs";
 
 function HomeToolsExamples() {
   return (
-      <div className="flex justify-center">
+      <div className="flex justify-center mb-24">
         <div className="h-[105vh]  w-[90%] rounded-3xl flex flex-col items-center bg-[#E5E2DF] mt-16  text-white">
         <h1 className="text-5xl font-medium text-center mt-24 leading-[94px] text-[#161616] ">
         Explore advanced tools

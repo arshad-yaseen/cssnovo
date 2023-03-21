@@ -1,9 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 import { BsFillPlayCircleFill } from "react-icons/bs";
 import BrandsPng from "../public/images/brands.png"
 
 function Hero() {
+
   return (
     <div className="flex h-screen flex-col items-center pt-10">
       <h1 className="text-[72px] leading-[94px] font-medium text-[#161616] text-center ">
@@ -15,9 +18,9 @@ function Hero() {
         effortless and efficient web design.
       </span>
       <div className="flex mt-12">
-        <button className="bg-[#161616] hover:bg-[#161616]/80 transition-colors text-white font-regular px-8 py-3.5 rounded-lg text-xl mr-5">
+        <Link href="/pricing" className="bg-[#161616] hover:bg-[#161616]/80 transition-colors text-white font-regular px-8 py-3.5 rounded-lg text-xl mr-5">
           Try for free
-        </button>
+        </Link>
         <button className=" text-[#161616] flex items-center bg-white hover:bg-[#F0F1EE] transition-colors border-[#161616] border-2 font-regular px-8 py-3.5 rounded-lg text-xl">
           <BsFillPlayCircleFill className="mr-2" /> Watch video
         </button>

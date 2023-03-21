@@ -27,13 +27,13 @@ function Pricing() {
 
   return (
     <div className="h-[160vh] w-full flex items-center justify-center flex-col">
-      <h1 className="text-6xl font-medium mt-48 text-[#161616]">
+      <h1 className="text-6xl font-medium  text-[#161616]">
         Choose a pricing plan
       </h1>
-      <p className="font-regular text-[1.040rem] mt-10 text-[#161616]">
-        Choose a plan that works for you
+      <p className="font-regular text-[1.040rem] leading-[1.8] mt-10 text-center w-[600px] text-[#161616]">
+      Discover the perfect plan to take your frontend development skills to the next level with our unbeatable pricing options at cssnovo.
       </p>
-      <div className="flex mt-14 w-full h-[900px] ">
+      <div className="flex mt-7 w-full h-[900px] ">
         <div className="w-1/3 h-full flex flex-col justify-center items-end ">
           <div className="w-[80%] h-[90%] rounded-2xl flex flex-col bg-[#E4E3DF] items-center p-10">
             <div className="w-full h-[120px] flex flex-col  border-b border-b-[#C5C2C0]">
