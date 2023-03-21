@@ -40,8 +40,9 @@ in seconds
           Try it now
         </button>
       </div>
-      <div className="w-1/2 h-full  flex flex-col justify-center px-20 overflow-hidden">
+      <div data-scroll data-scroll-speed="2"  className="w-1/2 h-full  flex flex-col justify-center px-20 overflow-hidden">
       <div
+      
           style={{
             paddingTop: "56.25%",
             position: "relative",
@@ -50,6 +51,7 @@ in seconds
           }}
         >
           <iframe
+          
             allowFullScreen=""
             allow="autoplay;fullscreen"
             src="https://onelineplayer.com/player.html?autoplay=true&autopause=false&muted=true&loop=true&url=https%3A%2F%2Fwww.dropbox.com%2Fs%2Fws8tlpgnog4d37e%2FX2Download.app-Make%2520A%2520Framer%2520Website%2520In%2520Minutes-%25281080p60%2529.mp4%3Fraw%3D1&poster=&time=false&progressBar=false&overlay=true&muteButton=false&fullscreenButton=false&style=light&quality=auto&playButton=false"

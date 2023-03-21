@@ -21,6 +21,7 @@ export default function Home() {
         el: data_scroll_container,
         smooth: true,
         smoothMobile: false,
+        multiplier: 0.5,
       })
     })
   }, []);
@@ -40,7 +41,7 @@ export default function Home() {
       <Section1 />
       <Section2 />
       <Section3 />
-      <ConversionExampleSection />
+      {/* <ConversionExampleSection /> */}
       <HomeToolsExamples />
       <Pricing />
       <Footer />

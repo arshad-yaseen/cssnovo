@@ -4,7 +4,7 @@ import React from "react";
 function Section2() {
   return (
     <div className="w-full h-[80vh] flex pt-10 bg-[#F0F1EE]">
-      <div className="w-1/2 h-full  flex flex-col justify-center px-20 overflow-hidden">
+      <div data-scroll data-scroll-speed="1" className="w-1/2 h-full  flex flex-col justify-center px-20 overflow-hidden">
       <div
           style={{
             paddingTop: "56.25%",
