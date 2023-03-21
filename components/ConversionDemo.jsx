@@ -410,13 +410,13 @@ let compatible_css = `.testimonial-section {
         >
           {startCode}
         </SyntaxHighlighter>
-        <h1 className="font-regular mt-2 example-message">{startMessage}</h1>
+        <h1 className="font-regular mt-2 example-message text-[#161616]">{startMessage}</h1>
       </div>
       <div className="h-full flex items-center px-12">
         <Image height={36} src={curvedArrow} alt="curved-arrow" />
       </div>
       <div className="w-1/2 flex-col h-full flex justify-center items-start ">
-        <h1 className="font-regular mt-2 example-message">{outputMessage}</h1>
+        <h1 className="font-regular mt-2 example-message text-[#161616]">{outputMessage}</h1>
         <SyntaxHighlighter
           id="output"
           language={outputMessage === "GENERATED CSS" || outputMessage === "To All Browsers Compatible CSS" ? "css" : "jsx"}

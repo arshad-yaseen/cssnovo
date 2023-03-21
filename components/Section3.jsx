@@ -1,38 +1,44 @@
 import Image from "next/image";
 import React from "react";
 
-function Section1() {
+function Section3() {
   return (
-    <div className="w-full h-[80vh] flex bg-[#F0F1EE] ">
+    <div className="w-full h-[80vh] flex pt-10 bg-[#F0F1EE]">
       <div className="w-1/2 h-full  flex flex-col justify-center px-20">
         <h1 className="text-6xl font-medium text-[#161616]">
-        Design to code, <br />
-in seconds
+        Anim, Transition <br /> Generator
         </h1>
-        <p className="font-regular text-xl mt-10 text-[#161616]">
-        Convert your designs into functional code quickly and easily with Design to Code.
-        </p>
 
         <ul>
           <li className="font-regular text-xl mt-10 flex text-[#161616]">
             <Image
+                width={28}
+                height={3}
               src="https://assets.website-files.com/6177739448baa66404ce1d9c/619c69d4ef5e408207944d15_checkmark_circle_outlined.png"
-              width={28}
-              height={3}
               alt="tick"
               className=" mr-2"
             />{" "}
-             Not just html and css
+            Faster Generation Using AI
           </li>
           <li className="font-regular text-xl mt-4 flex text-[#161616]">
             <Image
+                width={28}
+                height={3}
               src="https://assets.website-files.com/6177739448baa66404ce1d9c/619c69d4ef5e408207944d15_checkmark_circle_outlined.png"
-              width={28}
-              height={3}
               alt="tick"
               className=" mr-2"
             />{" "}
-            React, Vue, Angular, Svelte, and more
+            Css and Sass
+          </li>
+          <li className="font-regular text-xl mt-4 flex text-[#161616]">
+            <Image
+                width={28}
+                height={3}
+              src="https://assets.website-files.com/6177739448baa66404ce1d9c/619c69d4ef5e408207944d15_checkmark_circle_outlined.png"
+              alt="tick"
+              className=" mr-2"     
+            />{" "}
+            Other Frameworks
           </li>
         </ul>
 
@@ -53,4 +59,4 @@ in seconds
   );
 }
 
-export default Section1;
+export default Section3;

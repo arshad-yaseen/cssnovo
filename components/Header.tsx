@@ -13,16 +13,16 @@ function Header() {
           alt="header-logo"
           className="mt-1.5"
         />
-        <h3 className="font-medium text-2xl ml-3">cssnovo</h3>
+        <h3 className="font-medium text-2xl text-[#161616] ml-3">cssnovo</h3>
       </div>
       <div className="w-[33.333%] h-full flex items-center justify-center">
         <NavigationMenuSection />
       </div>
       <div className="w-[33.333%] h-full flex justify-end items-center">
-        <button className="text-black font-regular hover:bg-slate-50 px-4  py-2 rounded-lg mr-4">
+        <button className="text-[#161616] font-regular hover:bg-slate-50 px-4  py-2 rounded-lg mr-4">
           Login
         </button>
-        <button className="bg-black text-white font-regular px-4 py-2 rounded-lg mr-10">
+        <button className="bg-[#161616] text-white font-regular px-4 py-2 rounded-lg mr-10">
           Signup
         </button>
       </div>

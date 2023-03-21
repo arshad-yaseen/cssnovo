@@ -3,9 +3,11 @@ import Hero from "@/components/Hero";
 import OverviewSection from "@/components/OverviewSection.jsx";
 import Section1 from "@/components/Section1.jsx";
 import Section2 from "@/components/Section2.jsx";
+import Section3 from "@/components/Section3.jsx";
 import Head from "next/head";
 import DarkLogoRounded from "../public/assets/Logos/Svgs/black-logo-rounded-border.svg";
 import ConversionExampleSection from "@/components/ConversionExampleSection.jsx";
+import HomeToolsExamples from "@/components/HomeToolsExamples.jsx";
 
 export default function Home() {
   return (
@@ -21,7 +23,9 @@ export default function Home() {
       <OverviewSection />
       <Section1 />
       <Section2 />
+      <Section3 />
       <ConversionExampleSection />
+      <HomeToolsExamples />
     </div>
   );
 }

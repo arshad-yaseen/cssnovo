@@ -167,3 +167,8 @@ body {
     transform: scale(1);
   }
 }
+
+*::selection{
+  background-color: #171617;
+  color: #fff;
+}

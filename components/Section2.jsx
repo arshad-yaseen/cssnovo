@@ -10,19 +10,16 @@ function Section2() {
           loop
           muted
           className="scale-150  rounded-3xl "
-          src="https://rr2---sn-5aap5ojx-jv3l.googlevideo.com/videoplayback?expire=1679226575&ei=b6IWZO2OHcyO_9EPzNau6AY&ip=216.131.72.167&id=o-ACnTFlXeGx4U__6eEadKyQChAOCLPs1KncRzSuZw92E_&itag=315&aitags=133%2C134%2C135%2C136%2C160%2C242%2C243%2C244%2C247%2C278%2C298%2C299%2C302%2C303%2C308%2C315&source=youtube&requiressl=yes&spc=H3gIhjTL8ZDL7SsBVUQtEYGVgk77yOaXoXUk402w6f-6Pbqk4g&vprv=1&mime=video%2Fwebm&ns=b22SeU0np11Dh4uQQl7FulgL&gir=yes&clen=327147698&dur=1050.016&lmt=1657038622945662&keepalive=yes&fexp=24007246&c=WEB&txp=5319224&n=wNwQhhui3GYAhA&sparams=expire%2Cei%2Cip%2Cid%2Caitags%2Csource%2Crequiressl%2Cspc%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cdur%2Clmt&sig=AOq0QJ8wRAIgD1lL0U6R9yx9pjG0Ax75Y3h9i66c6qBoLFN-OHbyRVACIGX0A8YFeQULmJvvStfVNZ4HDomIK0q1EgJflR1KxrkE&redirect_counter=1&rm=sn-p5qeer76&req_id=17ec3ecc3e8fa3ee&cms_redirect=yes&cmsv=e&ipbypass=yes&mh=DG&mip=103.78.17.49&mm=31&mn=sn-5aap5ojx-jv3l&ms=au&mt=1679204711&mv=m&mvi=2&pcm2cms=yes&pl=24&lsparams=ipbypass,mh,mip,mm,mn,ms,mv,mvi,pcm2cms,pl&lsig=AG3C_xAwRQIhANk0e-iH8Kb0Sc9r1ZIROEsmCMMBLB1fX2PjQ_H7kgBgAiAKewbhXS_WT2_NyFHUZ4ahDjJ5TzqXrsRm4CWmWCc4LQ%3D%3D"
+          src="https://player.vimeo.com/progressive_redirect/download/810029173/container/c56cf4f6-1ee5-4037-ad36-8069dc4bf9ff/e037d239-d40b4c1b/x2download.app-make_a_framer_website_in_minutes-%281080p60%29.mp4%20%28720p%29.mp4?expires=1679378769&loc=external&signature=334f54f95cfb30d58b60b97073508f9035393d0ea910084eaa2cd77a00bf884c"
         ></video>
       </div>
       <div className="w-1/2 h-full  flex flex-col justify-center px-20">
-        <h1 className="text-6xl font-medium">
-          Design to code, <br /> in seconds
+        <h1 className="text-6xl font-medium text-[#161616]">
+          Debug your <br /> code using AI
         </h1>
-        <p className="font-regular text-xl mt-10">
-        Convert your designs into functional code quickly and easily with Design to Code.
-        </p>
 
         <ul>
-          <li className="font-regular text-xl mt-10 flex">
+          <li className="font-regular text-xl mt-10 flex text-[#161616]">
             <Image
                 width={28}
                 height={3}
@@ -30,9 +27,9 @@ function Section2() {
               alt="tick"
               className=" mr-2"
             />{" "}
-            Not just html and css
+            Faster Debugging Using AI
           </li>
-          <li className="font-regular text-xl mt-4 flex">
+          <li className="font-regular text-xl mt-4 flex text-[#161616]">
             <Image
                 width={28}
                 height={3}
@@ -40,11 +37,21 @@ function Section2() {
               alt="tick"
               className=" mr-2"
             />{" "}
-            React, Vue, Angular, Svelte, and more
+            Css and Sass
+          </li>
+          <li className="font-regular text-xl mt-4 flex text-[#161616]">
+            <Image
+                width={28}
+                height={3}
+              src="https://assets.website-files.com/6177739448baa66404ce1d9c/619c69d4ef5e408207944d15_checkmark_circle_outlined.png"
+              alt="tick"
+              className=" mr-2"
+            />{" "}
+            Other Frameworks
           </li>
         </ul>
 
-        <button className="bg-white text-black border-black border-2 font-regular w-fit text-lg px-6 py-2 mt-10 rounded-md">
+        <button className="bg-white text-[#161616] border-[#161616] border-2 font-regular w-fit text-lg px-6 py-2 mt-10 rounded-md">
           Try it now
         </button>
       </div>
