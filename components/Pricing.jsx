@@ -1,6 +1,7 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect } from "react";
 import SplitType from "split-type";
 
@@ -65,7 +66,7 @@ function Pricing() {
       },
       
     );
-    tl.fromTo(
+    tl2.fromTo(
       descchars,
       {
         opacity: 0
@@ -73,7 +74,7 @@ function Pricing() {
       {
         opacity: 1,
         stagger: 0.005,
-        duration: 0.5,
+        duration: 0.1,
         ease: 'power4.out',
       }
     );
@@ -117,9 +118,9 @@ function Pricing() {
               <p className="font-regular text-lg mt-4 text-black">
                 Free forever
               </p>
-              <button className="w-full py-2.5 border-2 border-black mt-8 hover:bg-[#E4E3DE] transition-colors rounded-lg text-lg font-regular bg-white">
+              <Link href="/signup" className="w-full py-2.5 flex items justify-center border-2 border-black mt-8 hover:bg-[#E4E3DE] transition-colors rounded-lg text-lg font-regular bg-white">
                 Join for free
-              </button>
+              </Link>
             </div>
             <div className="w-full h-[240px] flex flex-col  ">
               {free_plans.map((plan, index) => {
@@ -161,9 +162,9 @@ function Pricing() {
                 <p className="font-regular text-lg mt-4 text-black">
                   per month
                 </p>
-                <button className="w-full py-2.5  mt-8 hover:opacity-80 transition-opacity rounded-lg text-lg font-regular bg-black text-white">
+                <Link href="/signup" className="w-full py-2.5 flex items justify-center  mt-8 hover:opacity-80 transition-opacity rounded-lg text-lg font-regular bg-black text-white">
                   Get started with basic
-                </button>
+                </Link>
               </div>
               <div className="w-full h-[240px] flex flex-col  ">
                 {basic_plans.map((plan, index) => {
@@ -203,9 +204,9 @@ function Pricing() {
                 $8 <span className="text-xl">USD</span>
               </h1>
               <p className="font-regular text-lg mt-4 text-black">per month</p>
-              <button className="w-full py-2.5  mt-8 hover:opacity-80 transition-opacity rounded-lg text-lg font-regular bg-black text-white">
+              <Link href="/signup" className="w-full py-2.5 flex items justify-center  mt-8 hover:opacity-80 transition-opacity rounded-lg text-lg font-regular bg-black text-white">
                 Get Pro
-              </button>
+              </Link>
             </div>
             <div className="w-full h-[240px] flex flex-col  ">
               {pro_plans.map((plan, index) => {

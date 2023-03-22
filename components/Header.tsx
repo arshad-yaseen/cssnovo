@@ -8,7 +8,7 @@ function Header() {
 
 
   return (
-    <div className="w-full h-24 z-[100]  flex items-center sticky top-0  bg-[#F0F1EE]">
+    <header className="w-full h-24 z-50  flex items-center sticky top-0  bg-[#F0F1EE]">
       <Link href="/" className="w-[33.333%] hover:opacity-80 transition-opacity flex items-center h-full cursor-pointer pl-10">
         <Image
           height={40}
@@ -22,14 +22,14 @@ function Header() {
         <NavigationMenuSection />
       </div>
       <div className="w-[33.333%] h-full flex justify-end items-center">
-        <button className="text-[#161616] font-regular hover:bg-slate-50 px-4  py-2 rounded-lg mr-4">
+        <Link href="/login" className="text-[#161616] font-regular hover:bg-slate-50 px-4  py-2 rounded-lg mr-4">
           Login
-        </button>
-        <button className="bg-[#161616] text-white font-regular px-4 py-2 rounded-lg mr-10">
+        </Link>
+        <Link href="/pricing" className="bg-[#161616] text-white font-regular px-4 py-2 rounded-lg mr-10">
           Signup
-        </button>
+        </Link>
       </div>
-    </div>
+    </header>
   );
 }
 
