@@ -41,13 +41,13 @@ function Pricing() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#pricingSection", 
-        start: "top 300%", 
+        start: "top 390%", 
       }
     });
     const tl2 = gsap.timeline({
       scrollTrigger: {
         trigger: "#pricingSection", 
-        start: "top 290%", 
+        start: "top 380%", 
       }
     });
     

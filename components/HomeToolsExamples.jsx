@@ -16,13 +16,13 @@ function HomeToolsExamples() {
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: "#toolsExampleSection", 
-            start: "top 250%", 
+            start: "top 350%", 
           }
         });
         const tl2 = gsap.timeline({
           scrollTrigger: {
             trigger: "#toolsExampleSection", 
-            start: "top 240%", 
+            start: "top 340%", 
           }
         });
         
