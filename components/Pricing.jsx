@@ -1,5 +1,8 @@
+import gsap from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
+import SplitType from "split-type";
 
 function Pricing() {
   let free_plans = [
@@ -25,16 +28,83 @@ function Pricing() {
     "Framework Code From Html, CSS",
   ];
 
+  useEffect(()=> {
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const HeroTitle = new SplitType('h1.pricing-section-title',{ types: 'chars' })
+    const titlechars = HeroTitle.chars
+    const HeroDesc = new SplitType('p.pricing-section-desc',{ types: 'chars' })
+    const descchars = HeroDesc.chars
+  
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#pricingSection", 
+        start: "top 300%", 
+      }
+    });
+    const tl2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#pricingSection", 
+        start: "top 290%", 
+      }
+    });
+    
+    tl.fromTo(
+      titlechars,
+      {
+        y: 100,
+        opacity: 0
+      },
+      {
+        y: 0,
+        opacity: 1,
+        stagger: 0.04,
+        duration: 1,
+        ease: 'power4.out',
+      },
+      
+    );
+    tl.fromTo(
+      descchars,
+      {
+        opacity: 0
+      },
+      {
+        opacity: 1,
+        stagger: 0.005,
+        duration: 0.5,
+        ease: 'power4.out',
+      }
+    );
+    tl2.fromTo(
+      "div.pricing-section-plans",
+      {
+        opacity: 0,
+        y: 50
+      },
+      {
+        opacity: 1,
+        y: 0,
+        stagger: 0.2,
+        duration: 1,
+        ease: 'power4.out',
+      }
+    );
+
+  },[])
+
   return (
-    <div className="h-[160vh] w-full flex items-center justify-center flex-col">
-      <h1 className="text-6xl font-medium  text-[#161616]">
+    <div id="pricingSection" className="h-[160vh] w-full flex items-center justify-center flex-col">
+      <h1 className="text-6xl pricing-section-title clip-polygon font-medium  text-[#161616]">
         Choose a pricing plan
       </h1>
-      <p className="font-regular text-[1.040rem] leading-[1.8] mt-10 text-center w-[600px] text-[#161616]">
+      <p className="font-regular text-[1.040rem] pricing-section-desc clip-polygon leading-[1.8] mt-10 text-center w-[600px] text-[#161616]">
       Discover the perfect plan to take your frontend development skills to the next level with our unbeatable pricing options at cssnovo.
       </p>
       <div className="flex mt-7 w-full h-[900px] ">
-        <div className="w-1/3 h-full flex flex-col justify-center items-end ">
+
+        <div className="w-1/3 pricing-section-plans h-full flex flex-col justify-center items-end ">
           <div className="w-[80%] h-[90%] rounded-2xl flex flex-col bg-[#E4E3DF] items-center p-10">
             <div className="w-full h-[120px] flex flex-col  border-b border-b-[#C5C2C0]">
               <h1 className="text-3xl font-medium text-[#161616]">Free</h1>
@@ -75,7 +145,7 @@ function Pricing() {
           </div>
         </div>
 
-        <div className="w-1/3    h-full flex flex-col justify-center items-center ">
+        <div className="w-1/3 pricing-section-plans    h-full flex flex-col justify-center items-center ">
           <div className="w-[80%] h-[90%] rounded-2xl bg-gradient-to-r from-[#FF6C49] via-[#B648A0] to-[#6249FF] p-[0.20rem] flex items-center justify-center">
             <div className="w-full h-full rounded-[0.85rem] flex flex-col bg-white items-center p-10">
               <div className="w-full h-[120px] flex flex-col  border-b border-b-[#C5C2C0]">
@@ -120,7 +190,7 @@ function Pricing() {
           </div>
         </div>
 
-        <div className="w-1/3 h-full flex flex-col justify-center items-start ">
+        <div className="w-1/3 pricing-section-plans h-full flex flex-col justify-center items-start ">
           <div className="w-[80%] h-[90%] rounded-2xl flex flex-col bg-white items-center p-10">
             <div className="w-full h-[120px] flex flex-col  border-b border-b-[#C5C2C0]">
               <h1 className="text-3xl font-medium text-[#161616]">Pro</h1>
@@ -160,6 +230,7 @@ function Pricing() {
             </div>
           </div>
         </div>
+        
       </div>
     </div>
   );

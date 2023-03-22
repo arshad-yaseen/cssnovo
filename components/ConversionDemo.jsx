@@ -9,6 +9,7 @@ function HomeExampleSection() {
   const codeStyles1 = {
     fontSize: "16px",
     overflowY: "scroll",
+    height: "500px",
     width: "500px",
     borderRadius: "15px",
   };
@@ -400,13 +401,14 @@ let compatible_css = `.testimonial-section {
   }, []);
 
   return (
-    <div className="h-[90vh] flex  w-full mt-10 bg-[#F0F1EE]">
-      <div className="w-1/2 flex-col h-full flex items-end justify-center pb-20">
+    <div   className="h-[90vh] flex  w-full mt-10 bg-[#F0F1EE]">
+      <div  className="w-1/2 flex-col h-full flex items-end justify-center pb-20">
         <SyntaxHighlighter
+        
           id="start"
           language={outputMessage === "To All Browsers Compatible CSS" ? "css" : "jsx"}
           style={dracula}
-          customStyle={codeStyles1}
+          customStyle={codeStyles1} 
         >
           {startCode}
         </SyntaxHighlighter>

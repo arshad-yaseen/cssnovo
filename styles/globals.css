@@ -187,5 +187,5 @@ body {
   color: #fff;
 }
 .clip-polygon{
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 120% 0, 120% 120%, 0% 120%);
 }

@@ -35,11 +35,32 @@ function Section2() {
       }
     );
 
+    const tl2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#section2", 
+        start: "top 160%", 
+      }
+    });
+
+    tl2.fromTo(
+      "div.section-2-video",
+      {
+        opacity: 0,
+        x: -50
+      },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 1.5,
+        ease: 'power4.out',
+      }
+    );
+
   },[])
 
   return (
     <div id="section2" className="w-full h-[80vh] flex pt-10 bg-[#F0F1EE]">
-      <div className="w-1/2 h-full  flex flex-col justify-center px-20 overflow-hidden">
+      <div className="w-1/2 h-full section-2-video  flex flex-col justify-center px-20 overflow-hidden">
       <div
           style={{
             paddingTop: "56.25%",

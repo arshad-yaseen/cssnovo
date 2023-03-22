@@ -1,11 +1,82 @@
+import gsap from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
+import SplitType from "split-type";
 
 function Section3() {
+
+  useEffect(()=> {
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const HeroTitle = new SplitType('h1.section-3-title',{ types: 'chars' })
+    const chars = HeroTitle.chars
+  
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#section3", 
+        start: "top 200%", 
+      }
+    });
+    
+    tl.fromTo(
+      chars,
+      {
+        y: 100,
+        opacity: 0
+      },
+      {
+        y: 0,
+        opacity: 1,
+        stagger: 0.04,
+        duration: 1,
+        ease: 'power4.out',
+      }
+    );
+
+    tl.fromTo(
+      chars,
+      {
+        y: 100,
+        opacity: 0
+      },
+      {
+        y: 0,
+        opacity: 1,
+        stagger: 0.04,
+        duration: 1,
+        ease: 'power4.out',
+      }
+    );
+
+    const tl2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#section3", 
+        start: "top 190%", 
+      }
+    });
+
+    tl2.fromTo(
+      "div.section-3-video",
+      {
+        opacity: 0,
+        x: 50
+      },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 1.5,
+        ease: 'power4.out',
+      }
+    );
+
+  },[])
+
   return (
-    <div className="w-full h-[80vh] flex pt-10 bg-[#F0F1EE]">
+    <div id="section3" className="w-full h-[80vh] flex pt-10 bg-[#F0F1EE]">
       <div className="w-1/2 h-full  flex flex-col justify-center px-20">
-        <h1 className="text-6xl font-medium text-[#161616]">
+        <h1 className="text-6xl clip-polygon section-3-title font-medium text-[#161616]">
           Anim, Transition <br /> Generator
         </h1>
 
@@ -46,7 +117,7 @@ function Section3() {
           Try it now
         </button>
       </div>
-      <div className="w-1/2 h-full  flex flex-col justify-center px-20 overflow-hidden">
+      <div className="w-1/2 section-3-video h-full  flex flex-col justify-center px-20 overflow-hidden">
         <div
           style={{
             paddingTop: "56.25%",

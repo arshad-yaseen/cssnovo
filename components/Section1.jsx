@@ -36,6 +36,27 @@ function Section1() {
       }
     );
 
+    const tl2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#section1", 
+        start: "top 120%", 
+      }
+    });
+
+    tl2.fromTo(
+      "div.section-1-video",
+      {
+        opacity: 0,
+        x: 50
+      },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 1.5,
+        ease: 'power4.out',
+      }
+    );
+
   },[])
 
 
@@ -77,7 +98,7 @@ in seconds
           Try it now
         </button>
       </div>
-      <div  className="w-1/2 h-full  flex flex-col justify-center px-20 overflow-hidden">
+      <div  className="w-1/2 h-full section-1-video  flex flex-col justify-center px-20 overflow-hidden">
       <div
       
           style={{
