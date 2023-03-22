@@ -7,7 +7,7 @@ import { AiOutlineGoogle, AiFillApple, AiFillGithub } from "react-icons/ai";
 import Link from "next/link";
 import gsap from "gsap";
 
-function login() {
+function Login() {
   useEffect(() => {
     gsap.fromTo(
       ".login-content",
@@ -66,4 +66,4 @@ function login() {
   );
 }
 
-export default login;
+export default Login;

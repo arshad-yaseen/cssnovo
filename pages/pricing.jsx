@@ -5,7 +5,7 @@ import Footer from '../components/Footer'
 import Head from 'next/head'
 import DarkLogoRounded from "../public/assets/Logos/Svgs/black-logo-rounded-border.svg";
 
-function pricing() {
+function Pricing() {
 
 
   return (
@@ -22,4 +22,4 @@ function pricing() {
   )
 }
 
-export default pricing
+export default Pricing

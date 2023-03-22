@@ -46,7 +46,7 @@ export default function Home() {
         <Section1 />
         <Section2 />
         <Section3 />
-        {/* <ConversionExampleSection /> */}
+        <ConversionExampleSection />
         <HomeToolsExamples />
         <Pricing />
         <Footer />
