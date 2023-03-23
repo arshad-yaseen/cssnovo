@@ -4,9 +4,12 @@ import React from "react";
 import { BsFillPlayCircleFill } from "react-icons/bs";
 import BrandsPng from "../public/images/brands.png";
 import * as Dialog from "@radix-ui/react-dialog";
-import { Cross2Icon } from "@radix-ui/react-icons";
+
 
 function Hero() {
+
+ 
+
   return (
     <div className="flex h-screen flex-col items-center pt-10">
       <h1 className=" text-[72px] leading-[94px] font-medium text-[#161616] text-center ">
@@ -18,12 +21,12 @@ function Hero() {
         for effortless and efficient web design.
       </span>
       <div className="flex mt-12">
-        <Link
-          href="/pricing"
+        <button
+        id="try-for-free-button"
           className="bg-[#161616] hover:bg-[#161616]/80 transition-colors text-white font-regular px-8 py-3.5 rounded-lg text-xl mr-5"
         >
           Try for free
-        </Link>
+        </button>
 
         <Dialog.Root>
           <Dialog.Trigger asChild>

@@ -73,7 +73,9 @@ module.exports = {
       exitToLeft: "exitToLeft 250ms ease",
       exitToRight: "exitToRight 250ms ease",
       overlayShow: "overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1)",
-      contentShow: "contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1)"
+      contentShow: "contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1)",
+      fadeInSlow: "fadeIn 1s ease",
+      fadeOutSlow: "fadeOut 1s ease"
     },
   },
   plugins: [

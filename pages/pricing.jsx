@@ -16,7 +16,7 @@ function pricing() {
             <link rel="icon" href={DarkLogoRounded.src} />
         </Head>
         <Header />
-        <Pricing />
+        <Pricing page={true} />
         <Footer />
     </div>
   )

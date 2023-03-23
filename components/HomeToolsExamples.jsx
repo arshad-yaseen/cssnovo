@@ -56,7 +56,7 @@ function HomeToolsExamples() {
       },[])
 
   return (
-      <div id="toolsExampleSection" className="flex justify-center mb-24">
+      <div id="toolsExampleSection" className="flex justify-center ">
         <div className="h-[105vh]  w-[90%] rounded-3xl flex flex-col items-center bg-[#E5E2DF] mt-16  text-white">
         <h1 className="text-5xl tools-example-section-title clip-polygon font-medium text-center mt-24 leading-[94px] text-[#161616] ">
         Explore advanced tools
