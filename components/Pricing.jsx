@@ -101,7 +101,9 @@ function Pricing(props) {
   return (
     <div
       id="pricingSection"
-      className={`h-[160vh] w-full flex items-center justify-center ${props.page ? "pt-24" : "pt-48"}  flex-col`}
+      className={`h-[160vh] w-full flex items-center justify-center ${
+        props.page ? "pt-24" : "pt-48"
+      }  flex-col`}
     >
       <h1 className="text-6xl pricing-section-title clip-polygon font-medium  text-[#161616]">
         Choose a pricing plan
@@ -139,7 +141,7 @@ function Pricing(props) {
       </ul>
 
       {activeType === "monthly" ? (
-        <div className="flex animate-fadeOutSlow animate-fadeInSlow  w-full h-[900px] ">
+        <div className="flex   w-full h-[900px] ">
           <div className="w-1/3 pricing-section-plans h-full flex flex-col justify-center items-end ">
             <div className="w-[80%] h-[90%] rounded-2xl flex flex-col bg-[#E4E3DF] items-center p-10">
               <div className="w-full h-[120px] flex flex-col  border-b border-b-[#C5C2C0]">
@@ -281,7 +283,7 @@ function Pricing(props) {
           </div>
         </div>
       ) : (
-        <div className="flex animate-fadeOutSlow animate-fadeInSlow   w-full h-[900px] ">
+        <div className="flex    w-full h-[900px] ">
           <div className="w-1/3 pricing-section-plans h-full flex flex-col justify-center items-end ">
             <div className="w-[80%] h-[90%] rounded-2xl flex flex-col bg-[#E4E3DF] items-center p-10">
               <div className="w-full h-[120px] flex flex-col  border-b border-b-[#C5C2C0]">
@@ -334,7 +336,9 @@ function Pricing(props) {
                 <div className="w-full h-[120px] relative flex flex-col  border-b border-b-[#C5C2C0]">
                   <h1 className="text-3xl w-full flex font-medium text-[#161616]">
                     Basic
-                    <div className="py-1 px-3 absolute right-0 text-black  border-black border-2  text-xs flex items-center rounded-md">SAVE %25</div>
+                    <div className="py-1 px-3 absolute right-0 text-black  border-black border-2  text-xs flex items-center rounded-md">
+                      SAVE %25
+                    </div>
                   </h1>
                   <p className="font-regular text-lg mt-4 text-[#494849]">
                     Start using Basic tools
@@ -346,7 +350,9 @@ function Pricing(props) {
                   </h1>
                   <p className="font-regular flex text-lg mt-4 text-black">
                     per month
-                    <div className="py-1 px-3 ml-3 text-black  bg-[#E4E2DE] font-medium  text-xs flex items-center rounded-md">Billed yearly</div>
+                    <div className="py-1 px-3 ml-3 text-black  bg-[#E4E2DE] font-medium  text-xs flex items-center rounded-md">
+                      Billed yearly
+                    </div>
                   </p>
                   <Link
                     href="/signup"
@@ -383,8 +389,11 @@ function Pricing(props) {
           <div className="w-1/3 pricing-section-plans h-full flex flex-col justify-center items-start ">
             <div className="w-[80%] h-[90%] rounded-2xl flex flex-col bg-white items-center p-10">
               <div className="w-full relative h-[120px] flex flex-col  border-b border-b-[#C5C2C0]">
-                <h1 className="text-3xl flex font-medium text-[#161616]">Pro
-                <div className="py-1 px-3 absolute right-0 text-black  border-black border-2  text-xs flex items-center rounded-md">SAVE %25</div>
+                <h1 className="text-3xl flex font-medium text-[#161616]">
+                  Pro
+                  <div className="py-1 px-3 absolute right-0 text-black  border-black border-2  text-xs flex items-center rounded-md">
+                    SAVE %25
+                  </div>
                 </h1>
                 <p className="font-regular text-lg mt-4 text-[#494849]">
                   Become a css pro with all tools
@@ -394,10 +403,13 @@ function Pricing(props) {
                 <h1 className="text-6xl font-semibold mt-7 text-[#161616]">
                   $6 <span className="text-xl">USD</span>
                 </h1>
-                <p className="font-regular flex text-lg mt-4 text-black">per month
-                <div className="py-1 px-3 ml-3 text-black  bg-[#E4E2DE] font-medium  text-xs flex items-center rounded-md">Billed yearly</div>
+                <p className="font-regular flex text-lg mt-4 text-black">
+                  per month
+                  <div className="py-1 px-3 ml-3 text-black  bg-[#E4E2DE] font-medium  text-xs flex items-center rounded-md">
+                    Billed yearly
+                  </div>
                 </p>
-                
+
                 <Link
                   href="/signup"
                   className="w-full py-2.5 flex items justify-center  mt-8 hover:opacity-80 transition-opacity rounded-lg text-lg font-regular bg-black text-white"

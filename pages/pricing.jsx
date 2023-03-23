@@ -1,6 +1,6 @@
 import React from 'react'
 import Pricing from '../components/Pricing'
-import Header from '../components/Header'
+import Header from '../components/Header.jsx'
 import Footer from '../components/Footer'
 import Head from 'next/head'
 import DarkLogoRounded from "../public/assets/Logos/Svgs/black-logo-rounded-border.svg";

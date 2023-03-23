@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+import Header from "@/components/Header.jsx";
 import Hero from "@/components/Hero.jsx";
 import DarkLogoRounded from "../public/assets/Logos/Svgs/black-logo-rounded-border.svg";
 import OverviewSection from "@/components/OverviewSection.jsx";
