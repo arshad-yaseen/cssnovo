@@ -15,6 +15,8 @@ import { useSession } from "next-auth/react";
 
 export default function Home() {
 
+  console.log(process.env.NEXT_PUBLIC_GITHUB_ID);
+
     const { data: session } = useSession();
   
   useEffect(() => {
