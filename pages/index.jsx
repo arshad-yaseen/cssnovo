@@ -11,8 +11,12 @@ import HomeToolsExamples from "@/components/HomeToolsExamples.jsx";
 import Pricing from "@/components/Pricing.jsx";
 import Footer from "@/components/Footer.jsx";
 import { useEffect } from "react";
+import { useSession } from "next-auth/react";
 
 export default function Home() {
+
+    const { data: session } = useSession();
+  
   useEffect(() => {
     let data_scroll_container = document.querySelector(
       "[data-scroll-container]"
@@ -50,7 +54,7 @@ export default function Home() {
         <Section1 />
         <Section2 />
         <Section3 />
-        {/* <ConversionExampleSection /> */}
+        <ConversionExampleSection />
         <HomeToolsExamples />
         <Pricing />
         <Footer />

@@ -3,11 +3,18 @@ import Image from "next/image";
 import React, { useEffect } from "react";
 import DarkLogoRounded from "../public/assets/Logos/Svgs/black-logo-rounded.svg";
 import WhiteLogoRounded from "../public/assets/Logos/Svgs/white-logo-rounded.svg";
-import { AiOutlineGoogle, AiFillApple, AiFillGithub } from "react-icons/ai";
+import { AiOutlineGoogle, AiFillGithub } from "react-icons/ai";
+import { BsDiscord } from "react-icons/bs";
 import Link from "next/link";
 import gsap from "gsap";
+import { signIn, signOut, useSession } from "next-auth/react";
+import { useRouter } from "next/router";
+import { supabase } from "../lib/supabaseClient";
 
 function Login() {
+  const { data: session } = useSession();
+  let router = useRouter();
+
   useEffect(() => {
     gsap.fromTo(
       ".login-content",
@@ -25,6 +32,29 @@ function Login() {
     );
   }, []);
 
+  const onSignin = async (session) => {
+    const { data, error } = await supabase
+      .from("users")
+      .select()
+      .eq("email", session?.user?.email);
+    if (data) {
+      if (data.length === 0) {
+        signOut({ callbackUrl: process.env.NEXT_PUBLIC_URL + "/pricing" });
+      } else {
+        router.push("/tools");
+      }
+    } else {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    if (session) {
+      console.log(session);
+      onSignin(session);
+    }
+  }, [session]);
+
   return (
     <div className="w-full h-screen items-center pt-36 flex flex-col">
       <Head>
@@ -41,13 +71,22 @@ function Login() {
       <h1 className="text-4xl text-black font-medium mt-6 login-content">
         Welcome back
       </h1>
-      <button className="w-[500px] flex justify-center items-center login-content py-3.5  bg-white rounded-lg font-medium text-lg cursor-pointer mt-12 border-[#B7B4B0] border hover:bg-[#F0F1EE] transition-colors">
+      <button
+        onClick={() => signIn("google")}
+        className="w-[500px] flex justify-center items-center login-content py-3.5  bg-white rounded-lg font-medium text-lg cursor-pointer mt-12 border-[#B7B4B0] border hover:bg-[#F0F1EE] transition-colors"
+      >
         <AiOutlineGoogle className="text-2xl mr-2" /> Login using Google
       </button>
-      <button className="w-[500px] flex justify-center login-content items-center py-3.5  bg-white rounded-lg font-medium text-lg cursor-pointer mt-3 border-[#B7B4B0] border hover:bg-[#F0F1EE] transition-colors">
-        <AiFillApple className="text-2xl mr-2" /> Login using Apple
+      <button
+        onClick={() => signIn("discord")}
+        className="w-[500px] flex justify-center login-content items-center py-3.5  bg-white rounded-lg font-medium text-lg cursor-pointer mt-3 border-[#B7B4B0] border hover:bg-[#F0F1EE] transition-colors"
+      >
+        <BsDiscord className="text-2xl mr-2" /> Login using Discord
       </button>
-      <button className="w-[500px] flex justify-center login-content items-center py-3.5  bg-white rounded-lg font-medium text-lg cursor-pointer mt-3 border-[#B7B4B0] border hover:bg-[#F0F1EE] transition-colors">
+      <button
+        onClick={() => signIn("github")}
+        className="w-[500px] flex justify-center login-content items-center py-3.5  bg-white rounded-lg font-medium text-lg cursor-pointer mt-3 border-[#B7B4B0] border hover:bg-[#F0F1EE] transition-colors"
+      >
         <AiFillGithub className="text-2xl mr-2" /> Login using Github
       </button>
 
